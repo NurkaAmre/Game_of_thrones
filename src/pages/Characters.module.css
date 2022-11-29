@@ -1,0 +1,64 @@
+.characters {
+    background-color: lightslategray;
+    overflow: hidden;
+  }
+  
+  .Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10em, 0.6fr));
+    grid-template-rows: repeat(4, auto);
+    list-style: none;
+    width: 99vw;
+    justify-content: center;
+  }
+  
+  .characterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 22vh;
+  }
+  
+  .characterContainer:hover,
+  .characterContainer:active {
+    background-color: #5586e2;
+  }
+  
+  .characterName {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .search {
+    width: 300px;
+    height: 30px;
+    color: black;
+    margin-bottom: 30px;
+    border-style: none;
+    border-radius: 7px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    li img {
+      height: 70px;
+      width: 100px;
+    }
+  
+    .Grid {
+      grid-template-columns: repeat(2, auto);
+    }
+  
+    .characterName {
+      font-size: 13px;
+    }
+  }
