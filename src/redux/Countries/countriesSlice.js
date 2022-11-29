@@ -1,32 +1,30 @@
-import GETFROMAPI from './actionTypes';
+import { createSlice } from '@reduxjs/toolkit';
+import fetchCharacters from './fetchAPI';
 
-const API = 'https://thronesapi.com/api/v2/Characters';
+const charSlice = createSlice({
+  name: 'characters',
+  initialState: {
+    characters: [],
+    status: 'idle',
+  },
 
-const initialState = [];
-const characterReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case GETFROMAPI:
-      return [
-        ...action.payLoad,
-      ];
-    default:
-      return state;
-  }
-};
-
-export const getCharFromAPI = () => (dispatch) => fetch(API)
-  .then((res) => res.json()).then((data) => {
-    const charecters = data.map((character) => ({
-        id: character.name,
-        firstName: character.name,
-        lastName: character.lastname,
+  extraReducers: {
+    [fetchCharacters.fulfilled]: (state, action) => {
+      state.characters = action.payload.map((character) => ({
+        id: character.id,
+        name: character.name,
+        lastName: character.lastName,
         fullName: character.fullName,
         title: character.title,
         family: character.family,
         image: character.image,
         imageUrl: character.imageUrl,
       }));
-    dispatch({ type: GETFROMAPI, payLoad: charecters });
-  }).catch(() => {});
+    },
+    [fetchCharacters.rejected]: (state) => {
+      state.status = 'failed';
+    },
+  },
+});
 
-export default characterReducer;
+export default charSlice.reducer;

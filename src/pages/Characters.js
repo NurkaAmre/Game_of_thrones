@@ -20,7 +20,6 @@ const Characters = () => {
     return (
       <ul className={s.Grid}>
         {
-          // eslint-disable-next-line consistent-return, array-callback-return
           characters.filter((val) => {
             if (search === '') {
               return val;
