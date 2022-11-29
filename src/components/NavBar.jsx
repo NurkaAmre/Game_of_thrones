@@ -1,23 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './NavBar.css'
 
 const NavBar = () => (
   <>
-    <section className="navFlex">
-      <p>
-        <NavLink to="/">
-          <button type='button'>&larr;</button>
-        </NavLink>
-      </p>
+    <header className="navFlex">
       <nav>
         <NavLink to="/">
-          CharacterList
+          <button type='button' className='btn'>&larr;</button>
         </NavLink>
-        <NavLink to="/about">
-          About
-        </NavLink>
+        <ul className='ul'>
+          <li>
+            <NavLink to="/">Characters</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+        </ul>
       </nav>
-    </section>
+    </header>
   </>
 
 );
