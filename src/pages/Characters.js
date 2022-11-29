@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+// import fetchCharacters from '../redux/Dragons/fetchAPI';
 import Hero from '../components/Hero';
 import s from './Characters.module.css';
 
@@ -8,6 +9,11 @@ const Characters = () => {
   const [search, setSearch] = useState('');
   const characters = useSelector((state) => state.characters.characters);
   const status = useSelector((state) => state.characters.status);
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(fetchCharacters());
+  // });
 
   const showChar = () => {
     if (status === 'loading') {
@@ -19,8 +25,8 @@ const Characters = () => {
     }
     return (
       <ul className={s.Grid}>
-        {
-          characters.filter((val) => {
+        {// eslint-disable-next-line consistent-return, array-callback-return
+          characters.map((val) => {
             if (search === '') {
               return val;
             } if (val.name.toLowerCase().includes(search.toLowerCase())) {
