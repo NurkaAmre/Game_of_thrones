@@ -1,15 +1,18 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Characters from './pages/Characters';
 import CharacterDetails from './pages/CharacterDetails';
 import NavBar from './components/NavBar';
 import './App.module.css';
 import Footer from './components/Footer';
-
+import fetchCharacters from './redux/Countries/fetchAPI';
 import About from './pages/About';
 
 const App = () => {
-  (
+  const dispatch = useDispatch();
+  dispatch(fetchCharacters());
+  return (
     <>
       <NavBar />
       <Routes>
@@ -19,7 +22,7 @@ const App = () => {
             <Characters />
         )}
         />
-        <Route path="/characterlist/:characterdetail" element={<CharacterDetails />} />
+        <Route path="/character/:characterdetails" element={<CharacterDetails />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
