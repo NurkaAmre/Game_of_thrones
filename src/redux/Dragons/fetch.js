@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const fetchCharacters = createAsyncThunk(('fetchCharacters'), async () => {

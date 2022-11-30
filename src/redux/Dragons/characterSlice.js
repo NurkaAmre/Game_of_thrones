@@ -1,5 +1,6 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import fetchCharacters from './fetchAPI';
+import fetchCharacters from './fetch';
 
 const charSlice = createSlice({
   name: 'characters',
