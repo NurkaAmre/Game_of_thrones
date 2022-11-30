@@ -52,7 +52,6 @@ html {
 @media only screen and (max-width: 400px) {
   .infoList {
     width: 100vw;
-    
   }
 
   .img {
@@ -61,7 +60,6 @@ html {
   }
 
   .infoList li {
-    
     width: 100vw;
     min-width: 115px;
     margin: 0;
