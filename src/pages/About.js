@@ -8,7 +8,7 @@ const About = () => (
       <h2>
         Game Of || Thrones
       </h2>
-      <p>
+      <p className={s.maintext}>
         Game of Thrones is an American fantasy drama television series created by David Benioff and
         D.B. Weiss for HBO. It is an adaptation of A Song of Ice and Fire,
         a series of fantasy novels

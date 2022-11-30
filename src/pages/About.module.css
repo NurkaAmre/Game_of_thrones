@@ -11,8 +11,8 @@
 }
 
 h2 {
-  margin-top: 5%;
-  font-size: 2rem;
+  margin-top: 10%;
+  font-size: 3rem;
   text-shadow: 3px 3px 3px black;
 }
 
@@ -20,23 +20,13 @@ h2 {
   text-decoration: underline;
 }
 
-.about > div {
-  display: flex;
-  height: 20px;
-  column-gap: 30px;
-}
-
-.about div a > * {
-  transform: scale(2);
-}
-
-p {
+.maintext {
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 1.2rem;
+  margin-inline-start: 10%;
+  margin-inline-end: 10%;
+  font-size: 2rem;
   padding: 2rem;
-  text-shadow: 3px 3px 3px black;
+  text-shadow: 1px 1px 1px black;
 }
 
 #seasons {
