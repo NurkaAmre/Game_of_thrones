@@ -13,7 +13,7 @@ const charSlice = createSlice({
     [fetchCharacters.fulfilled]: (state, action) => {
       state.characters = action.payload.map((character) => ({
         id: character.id,
-        name: character.name,
+        firstName: character.firstName,
         lastName: character.lastName,
         fullName: character.fullName,
         title: character.title,

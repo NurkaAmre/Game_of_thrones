@@ -11,34 +11,28 @@ const CharacterDetails = () => {
   return (
     <>
       <section className={s.infoContainer}>
-        <img src={imageUrl} alt="character img" height="200" width="300" className={s.flag} />
-        <ul className={s.infoList}>
-          <li>
-            <p>First Name:</p>
-            {' '}
-            <span>{firstName}</span>
-          </li>
-          <li>
-            <p>Last Name:</p>
-            {' '}
-            <span>{lastName}</span>
-          </li>
-          <li>
-            <p>Full Name:</p>
-            {' '}
-            <span>{fullName}</span>
-          </li>
-          <li>
-            <p>Title:</p>
-            {' '}
-            <span>{title}</span>
-          </li>
-          <li>
-            <p>Family:</p>
-            {' '}
-            <span>{family}</span>
-          </li>
-        </ul>
+        <div className='s.image-section'>
+          <img src={imageUrl} alt="character img" height="500" width="300" className={s.img} />
+        </div>
+        <div className='s.info-section'>
+          <ul className={s.infoList}>
+            <li>
+              <p>First Name: <span className={s.span}>{firstName}</span></p>
+            </li>
+            <li>
+              <p>Last Name: <span className={s.span}>{lastName}</span></p>
+            </li>
+            <li>
+              <p>Full Name: {fullName}</p>
+            </li>
+            <li>
+              <p>Title: {title}</p>
+            </li>
+            <li>
+              <p>Family: {family}</p>
+            </li>
+          </ul>
+        </div>
       </section>
     </>
   );

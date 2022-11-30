@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-// import fetchCharacters from '../redux/Dragons/fetchAPI';
 import Hero from '../components/Hero';
 import s from './Characters.module.css';
 
@@ -9,17 +8,11 @@ const Characters = () => {
   const [search, setSearch] = useState('');
   const characters = useSelector((state) => state.characters.characters);
   const status = useSelector((state) => state.characters.status);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchCharacters());
-  // });
 
   const showChar = () => {
     if (status === 'loading') {
       return <div><p className="message">Loading...</p></div>;
     }
-
     if (status === 'failed') {
       return <div><p className="failMessage">Sorry, Try again later</p></div>;
     }
@@ -37,20 +30,21 @@ const Characters = () => {
               key={character.id}
               to={{
                 pathname: '/character/characterdetails',
-                search: character.name,
+                search: character.fullName,
               }}
               state={character}
             >
               <li id={index} className={s.characterContainer} aria-hidden="true">
+                <p id={index} className={s.characterName}>{character.fullName}</p>
                 <img
                   id={index}
                   key={character.id}
                   src={character.imageUrl}
                   alt={`${character.lastName}`}
-                  height="100"
-                  width="150"
+                  height="200"
+                  width="250"
+                  className={s.img}
                 />
-                <p id={index} className={s.characterName}>{character.name}</p>
               </li>
             </NavLink>
           ))
