@@ -1,72 +1,74 @@
+html {
+  font-size: 62.5%;
+}
+
 .infoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 5vh;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-  }
-  
-  .vector {
-    background-color: #178872;
-    height: 50px;
-    width: 50px;
-  }
-  
-  .flag {
-    border: 1px solid black;
-  }
-  
+  display: flex;
+  gap: 5%;
+  min-height: 90vh;
+  width: 55%;
+  margin: auto;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 28, 39, 0.8);
+}
+
+.image-section {
+  flex: 2 1 40rem;
+}
+
+.info-section {
+  flex: 1 1 40rem;
+}
+
+
+.img {
+  border: 1px solid black;
+  align-items: center;
+}
+
+.infoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoList li {
+  display: flex;
+}
+
+
+
+.infoList li p,
+.infoList li span {
+  margin: 0 10px;
+  font-size: 20px;
+  color: rgb(208, 222, 232);
+}
+
+.infoList li p {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 400px) {
   .infoList {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    width: calc(max(10vw, 900px));
-    align-items: center;
-    justify-content: space-evenly;
+    width: 100vw;
   }
-  
+
+  .flag {
+    height: 100px;
+    width: auto;
+  }
+
   .infoList li {
-    display: flex;
-    justify-content: space-between;
-    width: 80vw;
-    max-width: 800px;
-    min-width: 400px;
-    align-items: flex-start;
-    font-size: 30px;
+    width: 100vw;
+    min-width: 115px;
   }
-  
-  .infoList li:nth-child(even) {
-    background-color: #4369b2;
-  }
-  
+
   .infoList li p,
   .infoList li span {
-    margin: 0 10px;
-    font-size: 20px;
+    font-size: 13px;
   }
-  
-  .infoList li p {
-    font-weight: bold;
-  }
-  
-  @media only screen and (max-width: 400px) {
-    .infoList {
-      width: 100vw;
-    }
-  
-    .flag {
-      height: 100px;
-      width: auto;
-    }
-  
-    .infoList li {
-      width: 100vw;
-      min-width: 115px;
-    }
-  
-    .infoList li p,
-    .infoList li span {
-      font-size: 13px;
-    }
-  }
+}

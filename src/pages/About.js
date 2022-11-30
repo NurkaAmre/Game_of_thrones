@@ -19,20 +19,6 @@ const About = () => (
         2011, and concluded on May 19, 2019,
         with 73 episodes broadcast over eight seasons.
       </p>
-
-      <div className={s.iconsContainer}>
-        <label className='label'>Choose a season:</label>
-        <select name="seasons" id="seasons">
-          <option value="season1">Season 1</option>
-          <option value="season1">Season 1</option>
-          <option value="season1">Season 1</option>
-          <option value="season1">Season 1</option>
-          <option value="season1">Season 1</option>
-          <option value="season1">Season 1</option>
-          <option value="season1">Season 1</option>
-          <option value="season1">Season 1</option>
-        </select>
-      </div>
     </section>
   </>
 );

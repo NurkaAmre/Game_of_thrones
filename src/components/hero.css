@@ -1,14 +1,19 @@
 .hero {
-    background: url(./2tfun04oghm91.webp);
-    background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   display: flex;
-  flex-direction: column;
+  justify-self: center;
   align-items: center;
-  text-align: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .heroTitle {
-    padding: 2rem;
+  color: #4c6371;
+  font-size: 3rem;
+  padding: 0;
+}
+
+.para {
+  color: #4c6371;
+  padding: 0;
+  font-size: 1.5rem;
 }

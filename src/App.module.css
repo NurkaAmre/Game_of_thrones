@@ -6,7 +6,10 @@
 }
 
 body {
-  background-color: #1fc0b085;
+  background: url(./asset/Game3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 p {
