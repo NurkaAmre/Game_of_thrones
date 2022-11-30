@@ -54,18 +54,20 @@ html {
     width: 100vw;
   }
 
-  .flag {
-    height: 100px;
+  .img {
+    height: 300px;
     width: auto;
   }
 
   .infoList li {
     width: 100vw;
     min-width: 115px;
+    margin: 0;
   }
 
   .infoList li p,
   .infoList li span {
-    font-size: 13px;
+    font-size: 1rem;
+    padding-left: 25%;
   }
 }

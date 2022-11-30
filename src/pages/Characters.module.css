@@ -1,5 +1,4 @@
 .characters {
-  /* overflow: hidden; */
   margin-top: 5%;
 }
 
@@ -12,8 +11,6 @@
   width: 80vw;
   height: auto;
   justify-content: center;
-
-  /* width: 90%; */
   margin: auto;
 }
 
@@ -69,13 +66,24 @@ main {
 }
 
 @media only screen and (max-width: 400px) {
-  li img {
+  .img {
     height: 70px;
     width: 100px;
   }
 
   .Grid {
     grid-template-columns: repeat(2, auto);
+  }
+
+  .search {
+    width: 150px;
+    height: 20px;
+  }
+
+  .characterContainer {
+    height: 35vh;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .characterName {

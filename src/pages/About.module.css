@@ -1,5 +1,5 @@
 .about {
-  height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,4 +31,14 @@ h2 {
 
 #seasons {
   padding: 2rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .maintext {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 }
