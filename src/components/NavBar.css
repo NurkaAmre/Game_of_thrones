@@ -1,7 +1,6 @@
 * {
   color: white;
   text-decoration: none;
-  font-size: 2rem;
 }
 
 .navFlex {
@@ -23,6 +22,10 @@ nav {
   flex-wrap: wrap;
 }
 
+nav li {
+  font-size: 2rem;
+}
+
 .ul {
   display: flex;
   flex: 1 1 40rem;
@@ -35,7 +38,7 @@ nav {
 .btn {
   flex: 1 1 40rem;
   border: none;
-  background: #3b83db;
+  background: #64b3cc55;
   color: #fff;
   padding: 5px;
   border-radius: 3px;
@@ -46,4 +49,14 @@ nav {
   border: 2px solid white;
   margin-left: 0;
   padding-left: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  nav li {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 2px;
+  }
 }

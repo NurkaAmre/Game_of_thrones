@@ -17,10 +17,10 @@ const CharacterDetails = () => {
         <div className='s.info-section'>
           <ul className={s.infoList}>
             <li>
-              <p>First Name: <span className={s.span}>{firstName}</span></p>
+              <p>First Name: {firstName}</p>
             </li>
             <li>
-              <p>Last Name: <span className={s.span}>{lastName}</span></p>
+              <p>Last Name: {lastName}</p>
             </li>
             <li>
               <p>Full Name: {fullName}</p>

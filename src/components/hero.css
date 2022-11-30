@@ -17,3 +17,14 @@
   padding: 0;
   font-size: 1.5rem;
 }
+
+@media only screen and (max-width: 400px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .para {
+    padding-left: 5%;
+    font-size: 1rem;
+  }
+}
