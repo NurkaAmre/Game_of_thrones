@@ -26,17 +26,17 @@ const Characters = () => {
     return (
       <ul className={s.Grid}>
         {// eslint-disable-next-line consistent-return, array-callback-return
-          characters.map((val) => {
+          characters.filter((val) => {
             if (search === '') {
               return val;
-            } if (val.name.toLowerCase().includes(search.toLowerCase())) {
+            } if (val.fullName.toLowerCase().includes(search.toLowerCase())) {
               return val;
             }
           }).map((character, index) => (
             <NavLink
-              key={character.name}
+              key={character.id}
               to={{
-                pathname: '/country/countryinfo',
+                pathname: '/character/characterdetails',
                 search: character.name,
               }}
               state={character}
@@ -44,8 +44,8 @@ const Characters = () => {
               <li id={index} className={s.characterContainer} aria-hidden="true">
                 <img
                   id={index}
-                  key={character.lastName}
-                  src={character.image}
+                  key={character.id}
+                  src={character.imageUrl}
                   alt={`${character.lastName}`}
                   height="100"
                   width="150"

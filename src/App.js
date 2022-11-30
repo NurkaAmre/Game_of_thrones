@@ -6,7 +6,7 @@ import CharacterDetails from './pages/CharacterDetails';
 import NavBar from './components/NavBar';
 import './App.module.css';
 import Footer from './components/Footer';
-import fetchCharacters from './redux/Dragons/fetchAPI';
+import fetchCharacters from './redux/Dragons/fetch';
 import About from './pages/About';
 
 const App = () => {
